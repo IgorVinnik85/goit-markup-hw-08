@@ -1,0 +1,55 @@
+.invitation {
+  text-align: center;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+    margin-bottom: 0;
+  }
+}
+
+.invitation__text {
+  display: block;
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--white-proect-color);
+}
+
+.invitation__list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.invitation__icon {
+  width: 44px;
+  height: 44px;
+}
+
+.invitation__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  fill: #ffffff;
+  transition: background-color var(--transition-time);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-text-color);
+  }
+}

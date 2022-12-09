@@ -1,0 +1,226 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity var(--transition-time);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+
+  min-width: 450px;
+  min-height: 609px;
+  text-align: center;
+  background-color: var(--white-proect-color);
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--transition-time);
+
+  @media screen and (min-width: 1200px) {
+    min-width: 528px;
+    min-height: 581px;
+  }
+}
+
+.icon-close {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.icon-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px 8px;
+  border: none;
+  background-color: var(--white-proect-color);
+  cursor: pointer;
+  transition: fill var(--transition-time);
+}
+
+.icon-button:hover {
+  fill: var(--accent-text-color);
+}
+
+.modal-button {
+  padding: 10px 52px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  border: none;
+  color: var(--white-proect-color);
+  background-color: var(--accent-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color var(--transition-time);
+}
+
+.modal-button:hover,
+.modal-button:focus {
+  background-color: #188ce8;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.modal .modal-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.modal-wrapper:nth-of-type(4n) {
+  margin-bottom: 20px;
+}
+
+.coment-wrap {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.label-title {
+  top: 50%;
+  left: 25px;
+  transform: translateY(-50%);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--secondary-text-color);
+  margin-bottom: 4px;
+}
+
+.modal-input {
+  width: 100%;
+  padding: 11px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border var(--transition-time);
+}
+
+.modal-input:focus {
+  border: 1px solid var(--accent-text-color);
+}
+
+.modal-input:focus + .icon-person {
+  fill: var(--accent-text-color);
+}
+
+.modal-coment {
+  width: 100%;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border var(--transition-time);
+  resize: none;
+}
+
+.modal-coment:focus {
+  border: 1px solid var(--accent-text-color);
+}
+
+.input-checkbox {
+  position: absolute;
+  widows: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.modal-link {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: var(--accent-text-color);
+  margin-left: 7px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+.icon-person {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transition: fill var(--transition-time);
+}
+
+.checkbox-wrapper {
+  margin-bottom: 30px;
+}
+
+.modal-checkbox {
+  position: relative;
+  display: block;
+  margin: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+.icon-checkbox {
+  position: absolute;
+  top: 50%;
+  left: 1px;
+  transform: translateY(-50%);
+  fill: transparent;
+  border: 1px solid var(--primary-text-color);
+  border-radius: 4px;
+
+  @media screen and (min-width: 1200px) {
+    left: 7px;
+  }
+}
+
+.input-checkbox:checked + .icon-checkbox {
+  fill: var(--accent-text-color);
+  box-sizing: content-box;
+  border: var(--accent-text-color);
+}
