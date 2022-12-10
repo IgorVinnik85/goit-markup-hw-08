@@ -1,12 +1,13 @@
 .work {
+  display: none;
   padding-top: 0;
   padding-bottom: 94px;
-  @media screen and (min-width: 480px) {
-    display: none;
-  }
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
+  // @media screen and (min-width: 480px) {
+  //   display: none;
+  // }
+  // @media screen and (min-width: 768px) {
+  //   display: none;
+  // }
   @media screen and (min-width: 1200px) {
     display: block;
   }
@@ -19,6 +20,13 @@
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.work__card {
+  position: relative;
+  width: 370px;
+  flex-basis: calc((100% - 60px) / 3);
+  /* margin-right: 30px; */
 }
 
 .work__item {
@@ -43,15 +51,12 @@
   gap: 30px;
 }
 
-.work__card {
-  position: relative;
-  width: 370px;
-  flex-basis: calc((100% - 60px) / 3);
-  /* margin-right: 30px; */
-}
+
 
 .work__img {
+  display: block;
   width: 100%;
+  height: auto;
 }
 
 /* .images:nth-child(3n) {

@@ -190,6 +190,7 @@
 }
 
 .modal-checkbox {
+  display: block;
   position: relative;
   display: block;
   margin: 0;
@@ -198,6 +199,7 @@
   line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+  margin-left: 20px;
 
   @media screen and (min-width: 1200px) {
     font-size: 14px;
@@ -208,16 +210,19 @@
 .icon-checkbox {
   position: absolute;
   top: 50%;
-  left: 1px;
+  left: -12px;
   transform: translateY(-50%);
   fill: transparent;
   border: 1px solid var(--primary-text-color);
   border-radius: 4px;
+  
 
   @media screen and (min-width: 1200px) {
     left: 7px;
   }
 }
+
+
 
 .input-checkbox:checked + .icon-checkbox {
   fill: var(--accent-text-color);
