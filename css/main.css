@@ -22,7 +22,7 @@ img {
 }
 
 .container {
-  width: 1230px;
+  max-width: 1230px;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
@@ -101,7 +101,10 @@ a {
 }
 
 .menu-toggle {
-  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  display: block;
   margin: 0;
   padding: 0;
   border: none;
@@ -249,6 +252,7 @@ a {
 }
 
 .logo {
+  display: block;
   padding-top: 16px;
   padding-bottom: 16px;
   color: var(--accent-text-color);
@@ -429,6 +433,7 @@ a {
   margin: auto;
   height: auto;
   max-width: 1600px;
+  width: 100%;
   padding-top: 118px;
   padding-bottom: 118px;
   text-align: center;
@@ -562,6 +567,9 @@ a {
   margin-bottom: 30px;
 }
 
+.peculiarities__elements {
+  display: block;
+}
 @media screen and (min-width: 768px) {
   .peculiarities__elements {
     -ms-flex-preferred-size: calc((100% - 30px) / 2);
@@ -734,8 +742,9 @@ a {
 }
 
 .team__photo {
+  width: 100%;
+  max-width: 1200px;
   display: block;
-  max-width: 100%;
   height: auto;
 }
 
@@ -876,6 +885,8 @@ a {
 }
 
 .footer {
+  width: 100%;
+  max-width: 1200px;
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1058,9 +1069,8 @@ a {
 }
 
 .subscribe {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  max-width: 1200px;
+  display: block;
 }
 @media screen and (min-width: 1200px) {
   .subscribe {
@@ -1098,6 +1108,12 @@ a {
 }
 @media screen and (min-width: 1200px) {
   .subscribe__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1106,11 +1122,9 @@ a {
 }
 
 .subscribe__input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   color: var(--white-proect-color);
-  width: 450px;
+  width: 100%;
   height: 50px;
   margin-top: 0;
   margin-bottom: 20px;
@@ -1125,6 +1139,11 @@ a {
 }
 .subscribe__input:focus {
   border-color: var(--accent-text-color);
+}
+@media screen and (min-width: 480px) {
+  .subscribe__input {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .subscribe__input {
@@ -1144,7 +1163,6 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-width: 200px;
   height: 50px;
   padding: 10px 28px;
   font-family: inherit;

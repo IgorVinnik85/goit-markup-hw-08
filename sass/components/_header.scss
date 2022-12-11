@@ -13,7 +13,10 @@
 }
 
 .menu-toggle {
-  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  display: block;
   margin: 0;
   padding: 0;
   border: none;
