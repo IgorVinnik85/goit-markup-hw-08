@@ -1,7 +1,11 @@
 .header__main-nav {
-  display: flex;
-  align-items: center;
-  position: relative;
+  display: block;
+
+  @media screen and (min-width: 480px) {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
 }
 
 .header-border {

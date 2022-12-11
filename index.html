@@ -53,7 +53,10 @@
               >
             </li>
           </ul>
-          <button class="menu-toggle js-open-menu" type="button">
+          <button class="menu-toggle js-open-menu" 
+          type="button"  
+          aria-expanded="false"
+          aria-controls="mobile-menu">
             <svg
               aria-label="перемікач мобільного меню"
               class="header__icon-menu"
@@ -61,12 +64,11 @@
               height="40"
             >
               <use class="icon-menu" href="./images/menu.svg#icon-menu"></use>
-              <!-- <use class="icon-cross" href="./images/icons.svg#icon-close"></use> -->
             </svg>
           </button>
         </div>
       </div>
-      <div class="menu-container js-menu-container">
+      <div class="menu-container js-menu-container" id="mobile-menu">
         <div class="menu-wrapper">
           <button class="menu-toggle js-close-menu" type="button">
             <svg
@@ -198,6 +200,7 @@
             <li class="work__card">
               <img
                 class="work__img"
+                srcset="./images/box1.jpg 1x, ./images/box1-2x.jpg 2x"
                 src="./images/box1.jpg"
                 width="370"
                 alt="заняття"
@@ -207,6 +210,7 @@
             <li class="work__card">
               <img
                 class="work__img"
+                srcset="./images/box2.jpg 1x, ./images/box2-2x.jpg 2x"
                 src="./images/box2.jpg"
                 width="370"
                 alt="заняття"
@@ -216,6 +220,7 @@
             <li class="work__card">
               <img
                 class="work__img"
+                srcset="./images/box3.jpg 1x, ./images/box3-2x.jpg 2x"
                 src="./images/box3.jpg"
                 width="370"
                 alt="заняття"
@@ -241,14 +246,13 @@
                 <source 
                 srcset="./images/person1-mob.jpg 1x, ./images/person1-mob2x.jpg 2x"
                   media="(max-width: 767px)"/>
-              </picture>
-              <img
+                  <img
                 class="team__photo"
-                srcset="./images/person1.jpg 1x, ./images/person1-2x.jpg 2x"
                 src="./images/person1.jpg"
                 width="450"
                 alt="працівник"
               />
+              </picture>
               <div class="team__content">
                 <h3 class="team__name">Ігор Дем'яненко</h3>
                 <p class="team__job">Product Designer</p>
@@ -296,14 +300,13 @@
                 <source 
                 srcset="./images/person2-mob.jpg 1x, ./images/person2-mob2x.jpg 2x"
                   media="(max-width: 767px)"/>
-              </picture>
-              <img
+                  <img
                 class="team__photo"
-                srcset="./images/person2.jpg 1x, ./images/person2-2x.jpg 2x"
                 src="./images/person2.jpg"
                 width="450"
                 alt="працівник"
               />
+              </picture>
               <div class="team__content">
                 <h3 class="team__name">Ольга Рєпіна</h3>
                 <p class="team__job">Frontend Developer</p>
@@ -350,14 +353,13 @@
                 <source 
                 srcset="./images/person3-mob.jpg 1x, ./images/person3-mob2x.jpg 2x"
                   media="(max-width: 767px)"/>
-              </picture>
-              <img
+                  <img
                 class="team__photo"
-                srcset="./images/person3.jpg 1x, ./images/person3-2x.jpg 2x"
                 src="./images/person3.jpg"
                 width="450"
                 alt="працівник"
               />
+              </picture>
               <div class="team__content">
                 <h3 class="team__name">Микола Тарасов</h3>
                 <p class="team__job">Marketing</p>
@@ -404,14 +406,13 @@
                 <source 
                 srcset="./images/person4-mob.jpg 1x, ./images/person4-mob2x.jpg 2x"
                   media="(max-width: 767px)"/>
-              </picture>
-              <img
+                  <img
                 class="team__photo"
-                srcset="./images/person4.jpg 1x, ./images/person4-2x.jpg 2x"
                 src="./images/person4.jpg"
                 width="450"
                 alt="працівник"
               />
+              </picture>
               <div class="team__content">
                 <h3 class="team__name">Михайло Єрмаков</h3>
                 <p class="team__job">UI Designer</p>
