@@ -2,7 +2,7 @@
   background-image: var(--bg-image-gradient),
     url(../images/hero-mob.jpg);
   background-repeat: no-repeat;
-  background-color: #c4c4c4;
+  background-size: cover;
   background-position: center;
   margin: auto;
   height: auto;
@@ -11,13 +11,14 @@
   padding-top: 118px;
   padding-bottom: 118px;
   text-align: center;
+  background-color: #c4c4c4;
 
   @include retina {
     background-image: var(--bg-image-gradient),
       url(../images/hero-mob2x.jpg);
   }
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 768px) {
     background-image: var(--bg-image-gradient),
       url(../images/hero-tab.jpg);
     @include retina {
@@ -29,7 +30,7 @@
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
     background-image: var(--bg-image-gradient),
       url(../images/hero.jpg);
     @include retina {
